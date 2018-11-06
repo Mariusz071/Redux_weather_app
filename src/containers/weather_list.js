@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ChartItem from "../components/chart";
+import _ from 'lodash';
 import GoogleMap from '../components/google_map';
 
 
@@ -8,7 +9,7 @@ class WeatherList extends Component {
 
     renderWeather(cityData) {
         const city = cityData.city.name;
-        const tempValue = cityData.list.map(weather => weather.main.temp= Math.round(weather.main.temp - 273.15));
+        const tempValue = _.map(cityData.list.map(weather => weather.main.temp), (temp) => temp - 273);
         const pressureValue = cityData.list.map(pressure => pressure.main.pressure);
         const humidityValue = cityData.list.map(humidity => humidity.main.humidity);
         const {lon, lat } = cityData.city.coord;
