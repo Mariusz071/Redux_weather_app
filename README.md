@@ -1,5 +1,8 @@
-# ReduxSimpleStarter
+Simple weather app made to practice of Redux purpose.
+Serves only UK cities.
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
-
-Simple weather app create with React and Redux.
+Used:
+ - React
+ - Redux
+ - https://openweathermap.org/ API
+ - Google maps API
